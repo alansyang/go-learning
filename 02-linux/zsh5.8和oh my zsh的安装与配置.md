@@ -29,7 +29,9 @@ sudo make install
 ```
 ### 修改默认 shell 类型
 ```shell
-➜  ~ chsh -s /bin/zsh 
+➜  ~ echo /usr/local/bin/zsh | sudo tee -a /etc/shells
+/usr/local/bin/zsh
+➜  ~ chsh -s /usr/local/bin/zsh
 Changing shell for root.
 Shell changed.
 ```
@@ -42,6 +44,7 @@ https://github.com/ohmyzsh/ohmyzsh
 ```shell
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+> 重启 shell 或 重启服务器
 ### 常用的插件
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
